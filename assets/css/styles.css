@@ -1,0 +1,1012 @@
+
+/* Enhanced Header Styles */
+.header-gradient {
+  background: linear-gradient(
+    135deg,
+    #F28C28 0%,
+    #E67E22 50%,
+    #D35400 100%
+  ) !important;
+  background-color: #F28C28 !important;
+}
+
+/* Ensure header visibility */
+nav.header-gradient {
+  background: linear-gradient(
+    135deg,
+    #F28C28 0%,
+    #E67E22 50%,
+    #D35400 100%
+  ) !important;
+  min-height: 64px;
+}
+
+/* Force header background to always show */
+nav.bg-blue-700.header-gradient {
+  background: linear-gradient(
+    135deg,
+    #F28C28 0%,
+    #E67E22 50%,
+    #D35400 100%
+  ) !important;
+}
+
+/* Additional text shadow for better readability */
+.header-text-shadow {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header-logo-bounce {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-logo-bounce:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Logo image specific styling */
+.header-logo-bounce img {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.375rem; /* rounded-md */
+  background: transparent;
+  /* Remove background using CSS filters */
+  filter: brightness(1.1) contrast(1.1) saturate(1.2);
+  /* Optional: If logo has white background, try these filters */
+  /* filter: drop-shadow(0 0 0 transparent) brightness(1.1) contrast(1.2); */
+  /* mix-blend-mode: multiply; */ /* This can help remove white backgrounds */
+}
+
+.header-logo-bounce:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.2) contrast(1.2) saturate(1.3);
+}
+
+/* Alternative styling for logo without background container */
+.header-logo-bounce.no-bg {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.header-logo-bounce.no-bg img {
+  border-radius: 50%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) brightness(1.1)
+    contrast(1.1);
+}
+
+.header-user-avatar {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-user-avatar:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.header-role-badge {
+  transition: all 0.3s ease;
+}
+
+.header-role-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(53, 197, 34, 0.4);
+}
+
+.header-loading-bar {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
+  background-size: 200% 100%;
+  animation: loading-slide 2s ease-in-out infinite;
+}
+
+@keyframes loading-slide {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.header-time-display {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.header-user-info {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Force white text in header */
+.header-gradient * {
+  color: white !important;
+}
+
+.header-gradient .text-blue-100,
+.header-gradient .text-blue-200 {
+  color: rgba(219, 234, 254, 0.9) !important;
+}
+
+/* Enhanced header layout for left-right distribution */
+.header-gradient .flex.justify-between {
+  width: 100%;
+}
+
+/* Left section takes available space */
+.header-gradient .flex-1 {
+  flex: 1;
+  min-width: 0; /* Allow shrinking */
+}
+
+/* Right section stays compact */
+.header-gradient .flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Ensure proper spacing between header elements */
+.header-gradient .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0.75rem;
+}
+
+.header-gradient .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 1rem;
+}
+
+/* Mobile responsive adjustments for new layout */
+@media (max-width: 640px) {
+  .header-gradient .flex.justify-between {
+    flex-wrap: nowrap;
+  }
+
+  .header-gradient .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.5rem;
+  }
+
+  .header-gradient .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.75rem;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .header-gradient .flex.justify-between {
+    gap: 1rem;
+  }
+}
+
+/* Header alignment improvements */
+.header-gradient nav > div > div {
+  align-items: center;
+  width: 100%;
+}
+
+/* Ensure burger menu is always visible and properly sized */
+.sidebar-toggle-btn {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Ensure title section can grow/shrink properly */
+.header-gradient .flex.items-center.space-x-3 {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.header-gradient h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Ensure right section items are properly aligned */
+.header-gradient .flex.items-center.space-x-3.flex-shrink-0 {
+  justify-content: flex-end;
+}
+
+/* Better mobile spacing */
+@media (max-width: 480px) {
+  .header-gradient .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.25rem;
+  }
+
+  .header-gradient .px-3 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Mobile responsive header improvements */
+@media (max-width: 640px) {
+  .header-title-mobile {
+    font-size: 1rem;
+  }
+
+  .header-user-compact {
+    padding: 0.25rem;
+  }
+}
+
+/* Sidebar Toggle Animation */
+.sidebar-toggle-btn {
+  transition: all 0.2s ease;
+}
+
+.sidebar-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+/* Enhanced hover effects */
+.header-logout-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-logout-btn:hover {
+  transform: scale(1.05) translateY(-1px);
+  box-shadow: 0 8px 16px rgba(239, 68, 68, 0.3);
+}
+
+/* Enhanced sidebar and burger menu styles */
+.sidebar-transition {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Force layout stability and prevent content shift */
+.main-content {
+  position: relative;
+  min-width: 0; /* Prevent flex overflow */
+  box-sizing: border-box;
+}
+
+/* Ensure proper sidebar positioning */
+#sidebar {
+  position: fixed;
+  top: 64px; /* Header height */
+  left: 0;
+  z-index: 40;
+  box-sizing: border-box;
+}
+
+/* Main content layout system - Enhanced responsive behavior */
+.main-content {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease,
+    width 0.3s ease;
+  margin-left: 0;
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Default state - sidebar closed on all screens */
+.main-content {
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Desktop sidebar states - responsive width adjustment */
+@media (min-width: 1024px) {
+  /* Base desktop layout with sidebar space */
+  .main-content {
+    margin-left: 16rem; /* 256px (w-64) - default desktop state */
+    width: calc(100% - 16rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* When sidebar is explicitly closed on desktop */
+  .main-content.sidebar-closed-desktop {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* When sidebar is explicitly open on desktop */
+  .main-content.sidebar-open-desktop {
+    margin-left: 16rem !important;
+    width: calc(100% - 16rem) !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Enhanced sidebar positioning on desktop */
+  #sidebar {
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+    width: 16rem; /* Fixed width */
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .main-content.sidebar-open-mobile,
+  .main-content.sidebar-closed-desktop,
+  .main-content.sidebar-open-desktop {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* Mobile sidebar states */
+@media (max-width: 767px) {
+  .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .main-content.sidebar-open-mobile,
+  .main-content.sidebar-closed-desktop,
+  .main-content.sidebar-open-desktop {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .main-content.sidebar-open-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Prevent content scrolling when sidebar is open on mobile */
+  body.sidebar-open-mobile {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+
+  /* Ensure sidebar covers full height on mobile */
+  #sidebar {
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+    width: 16rem; /* Fixed width */
+  }
+}
+
+/* Enhanced transition system for smooth responsive behavior */
+.transition-sidebar {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Ensure content containers adapt properly */
+.main-content .p-6 {
+  transition: padding 0.3s ease;
+}
+
+/* Responsive content adjustments */
+@media (max-width: 640px) {
+  .main-content .p-6 {
+    padding: 1rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .main-content .p-6 {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content.sidebar-open-desktop .p-6 {
+    padding: 1.5rem !important;
+  }
+
+  .main-content.sidebar-closed-desktop .p-6 {
+    padding: 2rem !important;
+  }
+}
+
+/* Ensure tables and content are responsive */
+.main-content .overflow-x-auto {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Burger menu animations */
+.sidebar-toggle-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+}
+.sidebar-toggle-btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 168, 89, 0.8) !important; /* hijau BPS */
+}
+
+.sidebar-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.sidebar-toggle-btn:focus {
+  outline: 2px solid rgba(0, 168, 89, 0.5); /* hijau BPS */
+  outline-offset: 2px;
+}
+/* Icon rotation animation */
+.sidebar-toggle-btn i {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+/* Animated burger menu icon */
+.sidebar-toggle-btn i.fa-bars {
+  transform: rotate(0deg);
+}
+
+.sidebar-toggle-btn i.fa-times {
+  transform: rotate(180deg);
+}
+
+/* Hover effect for better visual feedback */
+.sidebar-toggle-btn:hover i {
+  transform: scale(1.1);
+}
+
+/* Debug styles (remove in production) */
+.sidebar-toggle-btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-toggle-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Ensure the button is always clickable */
+.sidebar-toggle-btn {
+  position: relative;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+/* Sidebar overlay */
+#sidebarOverlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Enhanced sidebar shadow when open */
+#sidebar.translate-x-0 {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar positioning and z-index improvements */
+#sidebar {
+  z-index: 40;
+  will-change: transform;
+  position: fixed;
+  left: 0;
+  top: 64px; /* Below header */
+  width: 16rem; /* 256px */
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Default sidebar state - hidden on mobile, visible on desktop */
+#sidebar {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 1024px) {
+  #sidebar {
+    transform: translateX(0);
+  }
+}
+
+/* Override when explicitly controlled by JavaScript */
+#sidebar.translate-x-0 {
+  transform: translateX(0) !important;
+}
+
+#sidebar.-translate-x-full {
+  transform: translateX(-100%) !important;
+}
+
+/* Enhanced overlay styling */
+#sidebarOverlay {
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(2px);
+  z-index: 35;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Additional responsive improvements consolidated above */
+
+/* Smooth content transition for all elements */
+.transition-sidebar {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Menu items animation when sidebar opens/closes */
+#sidebar .menu-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+}
+
+#sidebar.-translate-x-full .menu-item {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+#sidebar.translate-x-0 .menu-item {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Remove old conflicting styles - now handled by new main-content classes */
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
+
+/* Notification styles */
+.notification {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+  max-width: 400px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.notification.show {
+  transform: translateX(0);
+}
+
+/* Schedule reminder pulse */
+.schedule-reminder {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+/* Modal styles */
+.modal-overlay {
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 6px;
+  border: 2px solid #f9fafb;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Checklist item status badges */
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+/* Image preview in modal */
+.image-preview {
+  transition: transform 0.2s;
+}
+
+.image-preview:hover {
+  transform: scale(1.05);
+}
+
+/* Loading animation */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+  color: #3b82f6;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced verification modal styles */
+.verification-form-section {
+  background: linear-gradient(135deg, #F28C28 0%, #E67E22 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.radio-custom {
+  transform: scale(1.2);
+  accent-color: #3b82f6;
+}
+
+.checklist-item {
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.checklist-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.status-badge-bersih {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.status-badge-kotor {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+.status-badge-rusak {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.info-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 1px solid #cbd5e1;
+}
+
+.photo-thumbnail {
+  transition: all 0.3s ease;
+  border: 2px solid #e5e7eb;
+}
+
+.photo-thumbnail:hover {
+  transform: scale(1.05);
+  border-color: #3b82f6;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.btn-verify {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  transition: all 0.3s ease;
+}
+
+.btn-verify:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-cancel {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: linear-gradient(135deg, #4b5563, #374151);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 1rem;
+    max-height: 95vh;
+  }
+
+  .verification-form-section {
+    padding: 1rem;
+  }
+
+  .photo-thumbnail {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .btn-verify,
+  .btn-cancel {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .info-card .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Loading pulse effect */
+@keyframes loadingPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-pulse {
+  animation: loadingPulse 2s ease-in-out infinite;
+}
+
+/* Form enhancements */
+.verification-form-section label {
+  transition: all 0.3s ease;
+}
+
+.verification-form-section textarea {
+  transition: all 0.3s ease;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.verification-form-section textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Button states */
+.btn-verify:disabled,
+.btn-cancel:disabled {
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Radio button container animation */
+.verification-form-section .grid label {
+  transition: all 0.3s ease;
+}
+
+/* Success state styles */
+.success-state {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.success-state i {
+  animation: successBounce 0.6s ease-out;
+}
+
+@keyframes successBounce {
+  0% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Footer Styles - Clean and Simple */
+footer {
+  margin-top: auto;
+  box-shadow: 0 -2px 4px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #1f2937; /* Ensure consistent background */
+}
+
+/* Footer Logo Styles */
+.footer-logo {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+}
+
+.footer-logo img {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  /* Apply similar background removal filters as header */
+  filter: brightness(1.1) contrast(1.1) saturate(1.2);
+}
+
+.footer-logo:hover img {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  filter: brightness(1.2) contrast(1.2) saturate(1.3);
+}
+
+footer a {
+  transition: all 0.2s ease-in-out;
+}
+
+footer a:hover {
+  transform: translateX(2px);
+}
+
+/* Ensure body and html use full height for sticky footer */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area adjustments */
+/* Main content container - ensure full height layout */
+.main-content.flex.flex-col {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 4rem; /* Account for fixed header */
+}
+
+.main-content .flex-1 {
+  flex: 1 0 auto; /* Allow content to grow but not shrink */
+}
+
+/* Footer positioning - break out of padding constraints and stick to bottom */
+.main-content footer {
+  /* Default: compensate for main-content padding */
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  width: calc(100% + 3rem);
+  flex-shrink: 0; /* Prevent footer from shrinking */
+  margin-top: auto; /* Push footer to bottom */
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Desktop adjustments for sidebar states */
+@media (min-width: 1024px) {
+  /* When sidebar is closed on desktop - main-content has larger padding */
+  .main-content.sidebar-closed-desktop footer {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    width: calc(100% + 4rem);
+  }
+
+  /* When sidebar is open on desktop - main-content has normal padding */
+  .main-content.sidebar-open-desktop footer,
+  .main-content:not(.sidebar-closed-desktop) footer {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    width: calc(100% + 3rem);
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1023px) {
+  .main-content footer {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    width: calc(100% + 3rem);
+  }
+
+  footer .flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  footer .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.5rem;
+  }
+
+  footer .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .flex.items-center.space-x-4 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  footer .text-xs {
+    font-size: 10px;
+  }
+
+  .main-content.flex.flex-col {
+    min-height: 100vh;
+    padding-top: 3.5rem; /* Smaller header on mobile */
+  }
+}
+
+/* Footer animation */
+footer {
+  animation: slideUpFooter 0.4s ease-out;
+}
+
+@keyframes slideUpFooter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fix for double footer issue */
+footer + footer {
+  display: none;
+}
